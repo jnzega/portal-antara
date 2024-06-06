@@ -1,8 +1,5 @@
 <?php
-require_once 'controllers/PageController.php';
 
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+require_once './app/init.php';
 
-$controller = new PageController();
-$controller->render($page);
-?>
+$app = new App;
