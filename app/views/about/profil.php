@@ -1,2 +1,1 @@
-
-    <h1>Halaman Profil</h1>
+<h1>HALAMAN PROFIL</h1>
