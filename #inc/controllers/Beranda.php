@@ -2,8 +2,8 @@
 class Beranda extends Controller{
     public function index(){
         $data['title'] = 'PPID | PERUM LKBN ANTARA';
-        $this->view('templates/header', $data);
+        $this->view('header', $data);
         $this->view('beranda/index');
-        $this->view('templates/footer');
+        $this->view('footer');
     }
 }
