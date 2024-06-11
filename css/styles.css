@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -15,8 +15,8 @@ header .search-header {
     justify-content: space-around;
     align-items: center;
     padding: 5px 0;
-    font-size: smaller;
-    font-weight: bold;
+    font-size: 9pt;
+    font-weight: 700;
 }
 
 header .search-header .search-bar input#search {
@@ -54,5 +54,7 @@ header nav .container ul {
 
 header nav .container ul li a {
     text-decoration: none;
+    font-size: small;
     color: #2A3855;
+    font-weight: 600;
 }

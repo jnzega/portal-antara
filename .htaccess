@@ -1,7 +1,14 @@
 Options -Multiviews
 
+
+<FilesMatch "^(footer|header)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+RewriteRule ^page/(.*\.php)$ - [F,L]
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php?url=$1 [L]
-RewriteRule ^([a-z-]+)/([a-z-]+)$ index.php?controller=$1&action=$2 [L]
