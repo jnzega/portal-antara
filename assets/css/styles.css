@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+
+    --max-width: 1280px;
+    --search-color: #333333;
+    --icon-color: rgb(253,212,40);
+    --theme-color: rgb(42,56,85);
+}
+
+
+header {
+    width: 100%;
+}
+
+/* ============ Top Header ============ */
+.header-address-top{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--theme-color);
+    align-items: center;
+    color: white;
+}
+
+.header-address-top-container {
+    height: 100%;
+    width: 80%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* START: Address Text */
+.address-text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 75px;
+    font-size: smaller;
+}
+
+#address {
+    display: flex;
+    align-items: center;
+}
+
+.location-icon {
+    margin-right: 10px;
+    color: var(--icon-color);
+}
+
+#telephone {
+    display: flex;
+    align-items: center;
+}
+
+.telephone-icon {
+    margin-right: 10px;
+    color: var(--icon-color);
+}
+/* END: Address Text */
+
+/* START: Search Bar */
+.search-box {
+    width: max-content;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 28px;
+    background-color: white;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.search-icon {
+    color: var(--search-color);
+}
+
+.search-input {
+    font-size: 12px;
+    color: var(--search-color);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+/* END: Search Bar */
+/* ============ Top Header ============ */
+/* ============ Navigation ============ */
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 4px 1px #99999970;
+    height: 75px;
+}
+
+.container-fluid {
+    max-width: var(--max-width);
+}
+
+.navbar .container-fluid a, .navbar .container ul li a {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--theme-color);
+}
+
+.navbar-brand img{
+    width: 175px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 1px 1px 4px #99999970;;
+}
+/* ============ Navigation ============ */
+/* =========== Index Styles =========== */
+.carousel .carousel-inner .carousel-item img {
+    height: 1080px;
+}
+/* =========== Index Styles =========== */
