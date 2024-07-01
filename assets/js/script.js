@@ -1,20 +1,19 @@
+$(document).ready(function(){
+    // Inisialisasi carousel secara manual
+    var $carousel = $('#carouselExampleIndicators');
+    
+    // Atur interval untuk mengganti gambar setiap 15 detik (15000 ms)
+    setInterval(function(){
+        $carousel.carousel('next');
+    }, 5000);
 
-document.addEventListener('DOMContentLoaded', function () {
-    var dropdown = document.querySelector('.dropdown');
-    var dropdownContent = document.querySelector('.dropdown-content');
-
-    dropdown.addEventListener('mouseover', function () {
-        dropdownContent.style.display = 'block';
-        setTimeout(function () {
-            dropdownContent.style.opacity = '1';
-        }, 10);
-    });
-
-    dropdown.addEventListener('mouseout', function () {
-        dropdownContent.style.opacity = '0';
-        setTimeout(function () {
-            dropdownContent.style.display = 'none';
-        }, 500);
-    });
+    // Event hover untuk dropdown dengan efek fade
+    $('.dropdown').hover(
+        function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).fadeIn(300);
+        }, 
+        function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
+        }
+    );
 });
-

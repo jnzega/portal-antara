@@ -15,7 +15,7 @@ header {
 }
 
 /* ============ Top Header ============ */
-.header-address-top{
+.header-address-top {
     height: 35px;
     display: flex;
     justify-content: center;
@@ -111,7 +111,7 @@ input[type="search"]::-webkit-search-cancel-button {
     color: var(--theme-color);
 }
 
-.navbar-brand img{
+.navbar-brand img {
     width: 175px;
 }
 
@@ -122,11 +122,186 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .dropdown-menu {
     border: none;
-    box-shadow: 1px 1px 4px #99999970;;
+    box-shadow: 1px 1px 4px #99999970;
+}
+
+/* =========== Tambahkan Animasi Fade pada Dropdown =========== */
+.dropdown-menu {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 /* ============ Navigation ============ */
 /* =========== Index Styles =========== */
+
+/* carousel */
 .carousel .carousel-inner .carousel-item img {
-    height: 1080px;
+    aspect-ratio: 7 / 3;
 }
+/* carousel */
+
+/* Information Navigation */
+
+.information-navigation {
+    padding: 50px 0;
+}
+
+.information-navigation-container{
+    justify-content: center;
+}
+
+.information-navigation .card {
+    color: var(--theme-color);
+    align-items: center;
+    border: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Menambahkan transisi untuk border dan box-shadow */
+}
+
+.information-navigation .card:hover {
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2); /* Menambahkan shadow saat hover untuk efek lebih halus */
+}
+
+.information-navigation .card-body {
+    text-align: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+    justify-content: center;
+}
+
+.information-navigation .card-body .card-title {
+    font-weight: bold;
+}
+
+.information-navigation .information-navigation-icon {
+    font-size: 72pt;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+}
+
+.information-navigation .information-navigation-link {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+.information-navigation .information-navigation-link:hover {
+    text-decoration: underline;
+}
+
+/* Information Navigation */
+
+/* antara-update section */
+
+.antara-update {
+    padding: 50px 0px;
+    background-color: rgb(248, 248, 248);
+}
+
+.antara-update h1 {
+    font-weight: bold;
+    color: var(--theme-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.antara-update .divider {
+    display: flex;
+    justify-content: center;
+}
+
+.antara-update .divider .line-divider {
+    background-color: var(--theme-color);
+    height: 3px;
+    border-radius: 25px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.antara-update .card-container {
+    display: flex;
+    justify-content: center; /* Menambahkan ini jika ingin card berada di tengah secara horizontal */
+}
+
+.antara-update .card {
+    color: var(--theme-color);
+    border: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.antara-update .card:hover {
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.antara-update .card-container {
+    height: 550px;
+}
+
+.antara-update .card-title {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.antara-update .card-date-update {
+    color: rgba(42, 56, 85, 0.499);
+}
+
+.antara-update .antara-update-thumbnail {
+    aspect-ratio: 3 / 2;
+}
+
+.antara-update .card-text {
+    color: rgba(42, 56, 85, 0.752);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6; /* Menampilkan maksimal 6 baris */
+    line-clamp: 6; /* Untuk browser yang mendukung */
+    line-height: 1.5em; /* Sesuaikan dengan kebutuhan Anda */
+    max-height: 9em; /* (Jumlah baris) * (line-height) */
+}
+
+.antara-update .card-footer {
+    border: none;
+    background-color: white;
+}
+
+.antara-update .card-footer .card-link{
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+.antara-update .card-footer:hover .card-link{
+    text-decoration: underline;
+}
+
+/* Keyframes untuk animasi panah */
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Terapkan animasi saat link dihover */
+.antara-update .card-footer:hover svg {
+    animation: bounce 0.5s ease-in-out;
+}
+/* antara-update section */
 /* =========== Index Styles =========== */
+/* =========== Footer Style =========== */
+
+
+
+/* =========== Footer Style =========== */
