@@ -19,7 +19,7 @@ if (!function_exists('formatTanggal')) {
     }
 }
 
-$sql = "SELECT title, date, text, image FROM updates";
+$sql = "SELECT title, date, text, image, link FROM updates";
 $result = $conn->query($sql);
 
 $updates = [];

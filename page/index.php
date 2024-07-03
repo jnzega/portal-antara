@@ -89,12 +89,12 @@ function formatTanggal($tanggal) {
                     <div class="card w-100" style="width: 18rem;">
                         <img class="antara-update-thumbnail" src="<?= htmlspecialchars($update['image']); ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?= htmlspecialchars($update['title']); ?></h5>
+                            <h5 class="card-title"><a href="<?= htmlspecialchars($update['link']); ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($update['title']); ?></a></h5>
                             <p class="card-date-update"><?= formatTanggal(htmlspecialchars($update['date'])); ?></p>
                             <p class="card-text"><?= htmlspecialchars($update['text']); ?></p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="card-link">Selengkapnya <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--icon-color)"><path d="M304-76.26 242.26-139l343-343-343-343L304-887.74 709.74-482 304-76.26Z"/></svg></a>
+                            <a href="<?= htmlspecialchars($update['link']); ?>" target="_blank" class="card-link" rel="noopener noreferrer">Selengkapnya <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--icon-color)"><path d="M304-76.26 242.26-139l343-343-343-343L304-887.74 709.74-482 304-76.26Z"/></svg></a>
                         </div>
                     </div>
                 </div>

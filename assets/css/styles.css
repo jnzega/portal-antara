@@ -257,6 +257,17 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: bold;
 }
 
+.antara-update .card-body .card-title a {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+.antara-update .card-body .card-title a:hover {
+    text-decoration: underline;
+    color: var(--icon-color);
+}
+
+
 .antara-update .card-date-update {
     color: rgba(42, 56, 85, 0.499);
 }
