@@ -1,9 +1,7 @@
 <?php
 include 'koneksi.php';
 
-// Periksa apakah fungsi formatTanggal sudah ada
 if (!function_exists('formatTanggal')) {
-    // Setel lokal untuk bahasa Indonesia
     setlocale(LC_TIME, 'id_ID.UTF-8');
 
     function formatTanggal($tanggal) {
@@ -20,14 +18,10 @@ if (!function_exists('formatTanggal')) {
 }
 
 $sql = "SELECT title, date, text, image, link FROM updates";
-$result = $conn->query($sql);
+$stmt = $pdo->query($sql);
 
 $updates = [];
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $updates[] = $row;
-    }
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $updates[] = $row;
 }
-
-$conn->close();
 ?>
