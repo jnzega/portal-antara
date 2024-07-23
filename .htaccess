@@ -1,5 +1,4 @@
-Options -Multiviews
-
+Options -Indexes
 
 <FilesMatch "^(footer|header)\.php$">
     Order Allow,Deny

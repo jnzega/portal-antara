@@ -10,57 +10,46 @@ $(document).ready(function(){
     // Event hover untuk dropdown dengan efek fade
     $('.dropdown').hover(
         function() {
-            $(this).find('.dropdown-menu').first().stop(true, true).fadeIn(300);
+            $(this).find('.dropdown-menu').first().stop(true, true).fadeIn(50);
         }, 
         function() {
-            $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
+            $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(50);
         }
     );
-});
 
-$(document).ready(function() {
-    // Fungsi untuk memeriksa apakah elemen dalam viewport
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+    function adjustSnippetLines() {
+        $('.update-card').each(function() {
+            var $title = $(this).find('.update-card-title');
+            var $snippet = $(this).find('.update-card-snippet');
+            
+            // Calculate the number of lines in the title
+            var titleHeight = $title[0].scrollHeight;
+            var lineHeight = parseFloat($title.css('line-height'));
+            var titleLines = Math.round(titleHeight / lineHeight);
 
-    // Memeriksa dan menambahkan kelas visible ke elemen yang sesuai
-    function checkVisibility() {
-        $('.float-in-top').each(function() {
-            if (isElementInViewport(this)) {
-                $(this).addClass('visible');
-            }
-        });
+            // Calculate the new line clamp for the snippet
+            var maxLines = 7 - (titleLines - 1);
+            var snippetHeight = $snippet[0].scrollHeight;
 
-        $('.wipe-in-left').each(function() {
-            if (isElementInViewport(this)) {
-                $(this).addClass('visible');
-            }
-        });
+            // Check if the snippet overflows
+            if (snippetHeight > maxLines * lineHeight) {
+                // Truncate the text manually and add ellipsis
+                var originalText = $snippet.text();
+                var truncatedText = originalText;
 
-        $('.card-container').each(function(index) {
-            var $this = $(this);
-            if (isElementInViewport(this)) {
-                setTimeout(function() {
-                    $this.addClass('visible');
-                }, index * 300); // Penundaan 300ms untuk setiap card
+                while ($snippet[0].scrollHeight > maxLines * lineHeight) {
+                    truncatedText = truncatedText.slice(0, -1);
+                    $snippet.text(truncatedText + '...');
+                }
             }
         });
     }
 
-    // Event listener untuk scroll
-    $(window).on('scroll', function() {
-        checkVisibility();
+    // Adjust snippet lines on document ready
+    adjustSnippetLines();
+
+    // Adjust snippet lines on window resize
+    $(window).on('resize', function() {
+        adjustSnippetLines();
     });
-
-    // Memeriksa visibilitas saat halaman pertama kali dimuat
-    checkVisibility();
 });
-
-

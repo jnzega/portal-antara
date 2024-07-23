@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $data['title'] ?></title>
 
     <!-- Bootstrap Framework Components -->
@@ -51,57 +51,70 @@
         </div>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="http://localhost/portal-antara/">
-                    <img src="http://localhost/portal-antara/assets/img/Logo-LKBN-Antara.png" alt="Lembaga Kantor Berita Nasional ANTARA">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="http://localhost/portal-antara/">Beranda</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tentang PPID
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="http://localhost/portal-antara/page/profil">Profil</a></li>
-                                <li><a class="dropdown-item" href="http://localhost/portal-antara/page/tugas-dan-fungsi">Tugas dan Fungsi</a></li>
-                                <li><a class="dropdown-item" href="http://localhost/portal-antara/page/visi-dan-misi">Visi dan Misi</a></li>
-                                <li><a class="dropdown-item" href="http://localhost/portal-antara/page/struktur-organisasi">Struktur Organisasi</a></li>
-                                <li><a class="dropdown-item" href="http://localhost/portal-antara/page/regulasi">Regulasi</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pelaksana</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Informasi Publik
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Informasi Berkala</a></li>
-                                <li><a class="dropdown-item" href="#">Informasi Serta Merta</a></li>
-                                <li><a class="dropdown-item" href="#">Informasi Setiap Saat</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Layanan Informasi
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Permohonan Informasi</a></li>
-                                <li><a class="dropdown-item" href="#">Permohonan Keberatan</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">Kontak</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost/portal-antara/">
+                <img src="http://localhost/portal-antara/assets/img/Logo-LKBN-Antara.png" alt="Lembaga Kantor Berita Nasional ANTARA">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost/portal-antara/">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Antara</a>
+                                <ul class="dropdown-menu dropdown-sub-submenu">
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/profil">Profil</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/visi-dan-misi">Visi dan Misi</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/profil-dewas">Profil Dewan Pengawas</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/profil-direksi">Profil Dewan Direksi</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">PPID Antara</a>
+                                <ul class="dropdown-menu dropdown-sub-submenu">
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/profil">Profil</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/tugas-dan-fungsi">Tugas dan Fungsi</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/visi-dan-misi">Visi dan Misi</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/struktur-organisasi">Struktur Organisasi</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/regulasi">Regulasi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pelaksana</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Informasi Publik
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Informasi Berkala</a></li>
+                            <li><a class="dropdown-item" href="#">Informasi Serta Merta</a></li>
+                            <li><a class="dropdown-item" href="#">Informasi Setiap Saat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan Informasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Permohonan Informasi</a></li>
+                            <li><a class="dropdown-item" href="#">Permohonan Keberatan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Kontak</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-
-</body>
-
-</html>
+        </div>
+    </nav>

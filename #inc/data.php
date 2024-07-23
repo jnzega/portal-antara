@@ -17,11 +17,15 @@ if (!function_exists('formatTanggal')) {
     }
 }
 
-$sql = "SELECT title, date, text, image, link FROM updates";
-$stmt = $pdo->query($sql);
+try {
+    $sql = "SELECT title, date, text, image, link FROM updates";
+    $stmt = $pdo->query($sql);
 
-$updates = [];
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $updates[] = $row;
+    $updates = [];
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $updates[] = $row;
+    }
+} catch (PDOException $e) {
+    echo "Kesalahan: " . $e->getMessage();
 }
 ?>
