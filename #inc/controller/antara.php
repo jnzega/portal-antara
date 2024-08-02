@@ -29,4 +29,18 @@ class Antara extends Controller {
         $this->view('page/antara/antara-profil-direksi');
         $this->view('footer');
     }
+
+    public function nilai_nilai_perusahaan(){
+        $data['title'] = 'PPID | NILAI-NILAI PERUSAHAAN ANTARA';
+        $this->view('header', $data);
+        $this->view('page/antara/antara-nilai-nilai');
+        $this->view('footer');
+    }
+
+    public function sejarah_singkat(){
+        $data['title'] = 'PPID | SEJARAH SINGKAT ANTARA';
+        $this->view('header', $data);
+        $this->view('page/antara/antara-sejarah');
+        $this->view('footer');
+    }
 }

@@ -1,0 +1,31 @@
+<section class="about-pages section-title">
+    <h1>SEJARAH SINGKAT</h1>
+    <div class="divider">
+        <span class="line-divider"></span>
+    </div>
+    <div class="container-fluid">
+        <div class="section-card">
+            <h4>13 Desember 1937</h4>
+            <p>Kantor Berita ANTARA didirikan oleh Adam Malik, Soemanang, A.M. Sipahoetar dan PandoeKartawigoena ketika semangat perjuangan kemerdekaan nasional menggelora dan digerakkan olehpara pemuda pejuang. Inilah para Pendiri ANTARA (founding fathers).</p>
+            <br>
+            <h4>17 Agustus 1945</h4>
+            <p>Keberhasilan ANTARA menyiarkan Proklamasi Kemerdekaan Republik Indonesia pada tanggal 17Agustus 1945 ke seluruh dunia adalah wujud kecintaan dan baktinya yang besar bagi perjuanganbangsa Indonesia. Dari buku Catatan Politik Pengalaman Wartawan ANTARA oleh Ismet Rauf danSaleh Danny Adam (2002:11) disebutkan rencana penyebarluasan Proklamasi Indonesia ke seluruhdunia dipimpin oleh Adam Malik yang mendiktekan naskah proklamasi dari tempat persembunyiannyakarena dikejar-kejar tentara Jepang. Adam Malik dibantu Pangulu Lubis, satu-satunya orang ANTARAyang diminta bersiap-siap menyebarkan berita Proklamasi dengan mengatakan “bersiap-siapmenyiarkan sebuah berita penting”. Setelah teks Proklamasi dibacakan Soekarno, Adam Malikmenelpon ANTARA, diterima oleh Asa Bafagih yang diminta untuk menyampaikannya kepadaPangulu Lubis dengan berpesan “Jangan sampai gagal”. Pangulu mengirimkan naskah ke bagianradio dengan menyelipkannya dalam morse-cast Domei, di antara berita-berita yang telah dibubuhiizin Hodohan. Markonis Soegirin menjaga agar teks Proklamasi itu tersiar dan Markonis Wua yangmengirimkan. Maka menyebarkan berita Proklamasi Indonesia ke daerah dan internasional.</p>
+            <br>
+            <h4>Bulan Mei tahun 1962</h4>
+            <p>ANTARA resmi menjadi Lembaga Kantor Berita Nasional yang berada langsung di bawah PresidenRepublik Indonesia. Dalam Keputusan Presiden No 307 tahun 1962, tanggal 24 September 1962nama ANTARA diubah menjadi Lembaga Kantor Berita Nasional ANTARA dengan Dewan Pimpinandiketuai Pandu Kartawiguna dengan anggota-anggota Djawoto, Moh. Nahar, Subanto Taif, Adinegoro,Mashud Sosrojudho, Suhandar, Subakir, R. Moeljono dan Zein Effendi.</p>
+            <p>Selama lebih dari tiga perempat abad, ANTARA sebagai salah satu kantor berita bertekad untuk selalumenghadirkan berita dan foto mengenai peristiwa-peristiwa penting dan mutakhir secara cepat danlengkap ke seluruh dunia, baik melalui saluran distribusi sendiri maupun yang bekerjasama denganpara mitra di seluruh dunia.</p>
+            <br>
+            <h4>17 Juli Tahun 2007</h4>
+            <p>Melalui Peraturan Pemerintah Nomor: 40 Tahun 2007, akhirnya ANTARA resmi bergabung menjadikeluarga besar Kementerian BUMN dan berubah menjadi Perum Lembaga Kantor Berita NasionalANTARA.</p>
+            <p>Didukung teknologi informasi terkini, ANTARA memiliki jaringan komunikasi yang menjangkauberbagai pelosok tanah air dan dunia. ANTARA memiliki biro di setiap propinsi serta perwakilan dibeberapa kotamadya/kabupaten. Agar dapat menyajikan berita luar negeri dengan persepsi nasional,ANTARA mengendalikan biro/perwakilan di Kuala Lumpur (Malaysia), Beijing (China) dan London(Inggris).</p>
+            <p>Untuk memenuhi kebutuhan masyarakat terhadap informasi global, ANTARA juga menjalinkerjasama, baik secara komersial maupun non-komersial, dengan kantor-kantor berita di seluruhdunia, seperti AAP (Australia), Reuters (Inggris), AFP (Perancis), DPA (Jerman), Kyodo (Jepang),Bernama (Malaysia), Xinhua (PR China), CIC (Columbia), NAMPA (Namibia) dan lain-lainnya.</p>
+            <p>ANTARA aktif dalam berbagai organisasi regional dan international, seperti ANEX (ASEAN NewsExchange), OANA (Organization of Asia Pacific News Agencies) dan NANAP (Non-Aligned NewsAgencies Pool).</p>
+            <p>Ratusan berita luar negeri yang berasal dari para mitra kerja dan rata-rata 750 berita hasil liputanwartawan ANTARA sendiri disebarluaskan setiap hari melalui teknologi komunikasi terkini, sepertiVSAT dan DVB, serta berbagai teknologi berbasis Internet, seperti situs web, email dan ftp (filetransfer protocol).</p>
+            <p>Selain melayani berita dan foto, ANTARA juga menawarkan produk dan jasa lainnya seperti layanandata dan informasi pasar uang dan saham, penyebarluasan rilis pers (PRWire) dan pendidikanjurnalistik (Lembaga Pendidikan Jurnalistik ANTARA).</p>
+            <p>ANTARA juga bekerjasama dengan mitra-mitra asing seperti Reuters dan Bloomberg dalam menjuallayanan data dan informasi pasar global. Dengan kantor-kantor berita asing di Asia Pasifik, ANTARAmembentuk konsorsium Asia Pulse dalam memberikan layanan informasi bisnis Asia, dan membentukkonsorsium Asia Net dalam menyebarluaskan rilis pers secara global.</p>
+            <p>Sebagai bagian dari misi sosial budayanya, ANTARA mengelola sebuah galeri foto jurnalistik (GFJA).Galeri ini telah banyak dikunjungi dan telah dikenal di mancanegara. Belanda dan Australia pernahmemberi sumbangan fotro-foto berharga untuk dipamerkan di GFJA. Jepang dan Ford Foundationpernah membantu restorasi foto-foto bersejarah yang dimiliki galeri tersebut. Dengan berbagai pihak,GFJA juga pernah bekerjasama dalam menyelenggarakan kursus foto jurnalistik.</p>
+            <p>Gedung ANTARA di Jalan Antara, Pasar Baru, Jakarta Pusat merupakan bangunan bersejarahkarena pernah menyebarluaskan Proklamasi Kemerdekaan RI pada tahun 1945. Layaknya museum,gedung ini menyimpan dan memamerkan berbagai benda peninggalan wartawan sejak tahun 1945-1950 yang dapat dikunjungi oleh siapa pun yang berminat.</p>
+            <p>Pada bulan Desember 2008, Direktorat Pemberitaan ANTARA meraih sertifikasi ISO 9001-2000 yangkini telah diperbarui menjadi ISO 9001:2008. Sertifikat ini merupakan penjelasan atas persyaratanyang harus dipenuhi untuk sebuah sistem manajemen mutu yang baik. Ini merupakan bukti nyatabahwa semua individu di dalam ANTARA berkomitmen untuk memperluas tranformasi manajemenagar sistem manajemen mutu dapat lebih kuat dari sebelumnya.</p>
+        </div>
+    </div>
+</section>

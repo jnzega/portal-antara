@@ -9,10 +9,10 @@ class Ppid extends Controller {
         $this->view('footer');
     }
 
-    public function tugas_dan_fungsi(){
-        $data['title'] = 'PPID | TUGAS DAN FUNGSI PPID ANTARA';
+    public function tugas_dan_kewenangan(){
+        $data['title'] = 'PPID | TUGAS DAN KEWENANGAN PPID ANTARA';
         $this->view('header', $data);
-        $this->view('page/ppid/ppid-tugas-dan-fungsi');
+        $this->view('page/ppid/ppid-tugas-dan-kewenangan');
         $this->view('footer');
     }
 

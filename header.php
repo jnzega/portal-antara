@@ -75,13 +75,15 @@
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/visi-dan-misi">Visi dan Misi</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/profil-dewas">Profil Dewan Pengawas</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/profil-direksi">Profil Dewan Direksi</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/nilai-nilai-perusahaan">Nilai-nilai Perusahaan</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/antara/sejarah-singkat">Sejarah Singkat</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#">PPID Antara</a>
                                 <ul class="dropdown-menu dropdown-sub-submenu">
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/profil">Profil</a></li>
-                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/tugas-dan-fungsi">Tugas dan Fungsi</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/tugas-dan-kewenangan">Tugas dan Kewenangan</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/visi-dan-misi">Visi dan Misi</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/struktur-organisasi">Struktur Organisasi</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/portal-antara/page/ppid/regulasi">Regulasi</a></li>
