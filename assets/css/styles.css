@@ -137,7 +137,7 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 1px 1px 4px #99999970;
 }
 
-/* =========== Tambahkan Animasi Fade pada Dropdown =========== */
+/* Tambahkan Animasi Fade pada Dropdown */
 .dropdown-menu {
     display: block !important;
     opacity: 0;
@@ -150,7 +150,6 @@ input[type="search"]::-webkit-search-cancel-button {
     visibility: visible !important;
 }
 
-/* CSS untuk mengatur sub-submenu */
 .dropdown-submenu {
     position: relative;
 }
@@ -161,7 +160,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: -1px;
 }
 
-.dropdown-sub-submenu{
+.dropdown-sub-submenu {
     display: none !important;
 }
 
@@ -183,7 +182,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 50px 0;
 }
 
-.information-navigation-container{
+.information-navigation-container {
     justify-content: center;
 }
 
@@ -203,10 +202,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .information-navigation .information-navigation-icon {
     font-size: 72pt;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Standard syntax */
+    user-select: none;
 }
 
 .information-navigation .information-navigation-link {
@@ -217,8 +213,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .information-navigation .information-navigation-link:hover {
     text-decoration: underline;
 }
-
-/* Information Navigation */
 
 /* antara-update section */
 
@@ -263,8 +257,8 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-direction: column;
     align-items: stretch;
     justify-self: center;
-    
 }
+
 .update-card-thumbnail {
     border-radius: var(--card-border);
     aspect-ratio: 3 / 2;
@@ -277,7 +271,7 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
 }
 
-.update-card-title a{
+.update-card-title a {
     text-decoration: none;
     color: var(--theme-color);
     font-weight: bold;
@@ -296,7 +290,7 @@ input[type="search"]::-webkit-search-cancel-button {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     line-height: 1.5em;
-    text-overflow: ellipsis; /* Default value, will be updated by JavaScript */
+    text-overflow: ellipsis;
 }
 
 .update-card-footer {
@@ -308,7 +302,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .update-card-footer a {
     text-decoration: none;
     color: var(--icon-color);
-
 }
 
 .update-card-footer a:hover {
@@ -326,7 +319,7 @@ footer.antara-footer {
 
 footer.antara-footer .contact-footer {
     height: 75px;
-    background-color: rgb(42,56,85);
+    background-color: rgb(42, 56, 85);
 }
 
 footer.antara-footer .contact-footer .contact-footer-container {
@@ -355,7 +348,7 @@ footer.antara-footer .contact-footer .contact-footer-container a:hover {
 
 footer.antara-footer .address-navigation-footer {
     height: 350px;
-    background-color: rgb(61,76,111);
+    background-color: rgb(61, 76, 111);
     display: flex;
 }
 
@@ -376,7 +369,8 @@ footer.antara-footer .address-navigation-footer .address-navigation-footer-conta
     column-gap: 5px;
 }
 
-.address-container .icon-text-container .text-container p, .address-container .icon-text-container .icon-container p {
+.address-container .icon-text-container .text-container p, 
+.address-container .icon-text-container .icon-container p {
     margin: 0;
     color: white;
 }
@@ -387,7 +381,8 @@ footer.antara-footer .link-navigation-container {
     row-gap: 7px;
 }
 
-footer.antara-footer .link-navigation-container h5, footer.antara-footer .social-media-container h5 {
+footer.antara-footer .link-navigation-container h5, 
+footer.antara-footer .social-media-container h5 {
     font-weight: bold;
     color: white;
 }
@@ -422,7 +417,7 @@ footer.antara-footer .social-media-container .social-media-icon-grid .col a svg:
 
 footer.antara-footer .copyright-footer {
     height: 75px;
-    background-color: rgb(42,56,85);
+    background-color: rgb(42, 56, 85);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -434,7 +429,6 @@ footer.antara-footer .copyright-footer p {
     font-weight: lighter;
 }
 /* =========== Footer Style =========== */
-
 /* =========== About Pages Style =========== */
 
 .about-pages {
@@ -451,12 +445,4 @@ footer.antara-footer .copyright-footer p {
 
 .section-card p {
     text-align: justify;
-}
-
-/* =========== About Pages Style =========== */
-
-
-/* Media Query */
-@media screen and (max-width: ) {
-    
 }
