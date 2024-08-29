@@ -446,3 +446,18 @@ footer.antara-footer .copyright-footer p {
 .section-card p {
     text-align: justify;
 }
+
+
+#ttsSwitchContainer {
+    position: fixed;
+    top: 25%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 0 5px 5px 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+

@@ -7,20 +7,16 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
 <div id="carouselExampleIndicators" class="carousel slide">
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <?php foreach ($carouselImages as $index => $carousel): ?>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>" aria-current="true" aria-label="Slide <?= $index + 1 ?>"></button>
+            <?php endforeach; ?>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="http://localhost/portal-antara/assets/img/image-1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="http://localhost/portal-antara/assets/img/image-2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="http://localhost/portal-antara/assets/img/image-3.jpg" class="d-block w-100" alt="...">
-            </div>
+            <?php foreach ($carouselImages as $index => $carousel): ?>
+                <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+                    <img src="<?= htmlspecialchars($carousel['image']) ?>" class="d-block w-100" alt="<?= htmlspecialchars($carousel['title']) ?>">
+                </div>
+            <?php endforeach; ?>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,7 +27,6 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
             <span class="visually-hidden">Selanjutnya</span>
         </button>
     </div>
-
 </div>
 <nav class="information-navigation container-fluid">
     <nav class="information-navigation container-fluid">

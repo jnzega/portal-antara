@@ -18,13 +18,22 @@ if (!function_exists('formatTanggal')) {
 }
 
 try {
+    // Mengambil data dari tabel updates
     $sql = "SELECT title, date, text, image, link FROM updates";
     $stmt = $pdo->query($sql);
-
     $updates = [];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $updates[] = $row;
     }
+
+    // Mengambil data dari tabel carousel
+    $sqlCarousel = "SELECT title, image FROM carousel ORDER BY id ASC";
+    $stmtCarousel = $pdo->query($sqlCarousel);
+    $carouselImages = [];
+    while ($rowCarousel = $stmtCarousel->fetch(PDO::FETCH_ASSOC)) {
+        $carouselImages[] = $rowCarousel;
+    }
+    
 } catch (PDOException $e) {
     echo "Kesalahan: " . $e->getMessage();
 }

@@ -120,3 +120,10 @@
             </div>
         </div>
     </nav>
+
+    <div id="ttsSwitchContainer" class="text-center">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="ttsSwitch">
+            <label class="form-check-label" for="ttsSwitch">Text-to-Speech</label>
+        </div>
+    </div>

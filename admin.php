@@ -1,16 +1,17 @@
 <?php
 include '#inc/koneksi.php';
 
-function uploadImage($file, $title) {
+function uploadImage($file, $title, $isCarousel = false) {
     $allowedExtensions = ['jpg', 'jpeg', 'png'];
     $fileExtension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
-    
+
     if (!in_array($fileExtension, $allowedExtensions)) {
         throw new Exception("Format file tidak didukung.");
     }
 
-    $targetDir = 'assets/img/card-thumbnail/';
-    $targetFile = $targetDir . preg_replace("/[^a-zA-Z0-9]+/", "-", strtolower($title)) . '.' . $fileExtension;
+    $targetDir = $isCarousel ? 'assets/img/carousel-img/' : 'assets/img/card-thumbnail/';
+    $fileName = preg_replace("/[^a-zA-Z0-9]+/", "-", strtolower($title));
+    $targetFile = $targetDir . $fileName . '.' . $fileExtension;
 
     if (!move_uploaded_file($file['tmp_name'], $targetFile)) {
         throw new Exception("Gagal mengunggah file.");
@@ -20,6 +21,28 @@ function uploadImage($file, $title) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Handle carousel updates
+    for ($i = 1; $i <= 3; $i++) {
+        $carouselTitle = $_POST['carousel_title'][$i];
+        $image = 'assets/img/carousel-img/carousel-' . $i . '.jpg'; // Default image path
+
+        if (isset($_FILES['carousel_image']['name'][$i]) && $_FILES['carousel_image']['name'][$i] != '') {
+            $image = uploadImage([
+                'name' => $_FILES['carousel_image']['name'][$i],
+                'tmp_name' => $_FILES['carousel_image']['tmp_name'][$i],
+                'error' => $_FILES['carousel_image']['error'][$i],
+                'size' => $_FILES['carousel_image']['size'][$i]
+            ], 'carousel-' . $i, true);
+        }
+
+        // Updating or inserting carousel image info
+        $sql = "INSERT INTO carousel (id, title, image) VALUES (?, ?, ?)
+                ON DUPLICATE KEY UPDATE title = VALUES(title), image = VALUES(image)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$i, $carouselTitle, $image]);
+    }
+
+    // Handle updates for antara-update
     foreach ($_POST['updates'] as $update) {
         $id = $update['id'];
         $title = $update['title'];
@@ -43,9 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$title, $date, $text, $image, $link, $id]);
     }
 
-    echo "Data berhasil diperbarui.";
+    echo "<div class='alert alert-success'>Data berhasil diperbarui.</div>";
 }
 
+// Fetching carousel data
+$carouselImages = $pdo->query("SELECT id, title, image FROM carousel ORDER BY id ASC")->fetchAll(PDO::FETCH_ASSOC);
+
+// Fetching updates data
 $sql = "SELECT id, title, date, text, image, link FROM updates";
 $stmt = $pdo->query($sql);
 $updates = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -63,6 +90,32 @@ $updates = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="container mt-5">
         <h1>Admin Dashboard</h1>
         <form method="POST" action="" enctype="multipart/form-data">
+            <h2>Kelola Carousel</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Slide</th>
+                        <th>Title</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php for ($i = 1; $i <= 3; $i++): 
+                        $carousel = $carouselImages[$i-1] ?? ['id' => $i, 'title' => '', 'image' => 'assets/img/carousel-img/carousel-' . $i . '.jpg'];
+                    ?>
+                        <tr>
+                            <td>Slide <?= $carousel['id'] ?></td>
+                            <td><input type="text" name="carousel_title[<?= $carousel['id'] ?>]" value="<?= htmlspecialchars($carousel['title']) ?>" class="form-control"></td>
+                            <td>
+                                <input type="file" name="carousel_image[<?= $carousel['id'] ?>]" class="form-control">
+                                <img src="<?= htmlspecialchars($carousel['image']) ?>" alt="Carousel Image" style="width: 100px; margin-top: 10px;">
+                            </td>
+                        </tr>
+                    <?php endfor; ?>
+                </tbody>
+            </table>
+            
+            <h2>Antara Update</h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -85,6 +138,7 @@ $updates = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td>
                                 <input type="hidden" name="existing_image[<?= $row['id'] ?>]" value="<?= htmlspecialchars($row['image']) ?>">
                                 <input type="file" name="image[<?= $row['id'] ?>]" class="form-control">
+                                <img src="<?= htmlspecialchars($row['image']) ?>" alt="Update Image" style="width: 100px; margin-top: 10px;">
                             </td>
                         </tr>
                     <?php endforeach; ?>
