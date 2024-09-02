@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 23, 2024 at 10:33 AM
+-- Generation Time: Sep 02, 2024 at 05:49 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `portal_antara`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carousel`
+--
+
+CREATE TABLE `carousel` (
+  `id` int NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `carousel`
+--
+
+INSERT INTO `carousel` (`id`, `title`, `image`) VALUES
+(1, 'Gambar 1', 'assets/img/carousel-img/carousel-1.jpg'),
+(2, 'Gambar 2', 'assets/img/carousel-img/carousel-2.jpg'),
+(3, 'Gambar 3', 'assets/img/carousel-img/carousel-3.jpg');
 
 -- --------------------------------------------------------
 
@@ -56,6 +77,12 @@ INSERT INTO `updates` (`id`, `title`, `date`, `text`, `image`, `link`) VALUES
 --
 
 --
+-- Indexes for table `carousel`
+--
+ALTER TABLE `carousel`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `updates`
 --
 ALTER TABLE `updates`
@@ -64,6 +91,12 @@ ALTER TABLE `updates`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `carousel`
+--
+ALTER TABLE `carousel`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `updates`
