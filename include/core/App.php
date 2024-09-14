@@ -49,8 +49,8 @@ class App {
         }
 
         // Load the controller
-        if (file_exists('#inc/controller/' . $this->controller . '.php')) {
-            require_once '#inc/controller/' . $this->controller . '.php';
+        if (file_exists('include/controller/' . $this->controller . '.php')) {
+            require_once 'include/controller/' . $this->controller . '.php';
             $this->controller = new $this->controller;
         } else {
             $this->redirectHome();

@@ -1,5 +1,5 @@
 <?php
-include '#inc/koneksi.php';
+include 'include/koneksi.php';
 
 function uploadImage($file, $title, $isCarousel = false) {
     $allowedExtensions = ['jpg', 'jpeg', 'png'];

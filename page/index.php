@@ -1,5 +1,5 @@
 <?php
-include '#inc/data.php';
+include 'include/data.php';
 
 setlocale(LC_TIME, 'id_ID.UTF-8');
 ?>
