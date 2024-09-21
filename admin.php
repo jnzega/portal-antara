@@ -107,7 +107,7 @@ $updates = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td>Slide <?= $carousel['id'] ?></td>
                             <td><input type="text" name="carousel_title[<?= $carousel['id'] ?>]" value="<?= htmlspecialchars($carousel['title']) ?>" class="form-control"></td>
                             <td>
-                                <input type="file" name="carousel_image[<?= $carousel['id'] ?>]" class="form-control">
+                                <input type="file" name="carousel_image[<?= $carousel['id'] ?>]" accept=".jpg, .jpeg, .png" class="form-control">
                                 <img src="<?= htmlspecialchars($carousel['image']) ?>" alt="Carousel Image" style="width: 100px; margin-top: 10px;">
                             </td>
                         </tr>
@@ -137,7 +137,7 @@ $updates = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><input type="url" name="updates[<?= $row['id'] ?>][link]" value="<?= htmlspecialchars($row['link']) ?>" class="form-control"></td>
                             <td>
                                 <input type="hidden" name="existing_image[<?= $row['id'] ?>]" value="<?= htmlspecialchars($row['image']) ?>">
-                                <input type="file" name="image[<?= $row['id'] ?>]" class="form-control">
+                                <input type="file" name="image[<?= $row['id'] ?>]" accept=".jpg, .jpeg, .png" class="form-control">
                                 <img src="<?= htmlspecialchars($row['image']) ?>" alt="Update Image" style="width: 100px; margin-top: 10px;">
                             </td>
                         </tr>

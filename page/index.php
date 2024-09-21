@@ -20,53 +20,14 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Sebelumnya</span>
+            <span class="visually-hidden"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Selanjutnya</span>
+            <span class="visually-hidden"></span>
         </button>
     </div>
 </div>
-<nav class="information-navigation container-fluid">
-    <nav class="information-navigation container-fluid">
-        <div class="row row-cols-1 row-cols-md-3 g-4 information-navigation-container">
-            <div class="card-container col">
-                <div class="inside-card-container hovered-shadow card h-100">
-                    <span class="information-navigation-icon material-symbols-outlined">
-                        history_toggle_off
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="information-navigation-link" href="http://localhost/portal-antara/#">Informasi Berkala</a></h5>
-                        <p class="card-text">Informasi yang wajib disediakan dan diumumkan secara rutin atau berkala sekurang-kurangnya setiap 6 bulan sekali.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col">
-                <div class="card hovered-shadow h-100">
-                    <span class="information-navigation-icon material-symbols-outlined">
-                        list_alt
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="information-navigation-link" href="http://localhost/portal-antara/#">Informasi Serta Merta</a></h5>
-                        <p class="card-text">Informasi yang wajib disediakan dan diumumkan terkait hajat hidup orang banyak dan ketertiban umum.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col">
-                <div class="card hovered-shadow h-100">
-                    <span class="information-navigation-icon material-symbols-outlined">
-                        concierge
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="information-navigation-link" href="http://localhost/portal-antara/#">Informasi Setiap Saat</a></h5>
-                        <p class="card-text">Informasi yang wajib disediakan untuk bisa langsung diberikan kepada Pemohon Informasi Publik ketika terdapat permohonan.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</nav>
 
 <section class="antara-update section-title">
     <h1>ANTARA UPDATE</h1>

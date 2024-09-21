@@ -1,6 +1,125 @@
+/* ========== global ========== */
 * {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     font-style: normal;
+    
+    --color-main: #2A3855;
+    --color-secondary-1: #FFFFFF;
+    --fz-small: 12px;
+}
+
+.carousel .carousel-inner .carousel-item img {
+    aspect-ratio: 7 / 3;
+}
+
+img.update-card-thumbnail{
+    aspect-ratio: 3 / 2;
+    width: 300px;
+}
+
+.center-item-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.center-item-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.container-width {
+    max-width: 1280px;
+}
+
+/* ============================================================ */
+/* ========================== Header ========================== */
+/* ============================================================ */
+
+header {
+    height: 100px;
+    position: sticky;
+    top: -35px;
+    z-index: 3;
+}
+
+header .header-top {
+    background-color: var(--color-main);
+    height: 35px;
+    width: 100%;
+}
+
+header .header-top .header-top-container {
+    width: 100%;
+    height: 100%;
+}
+
+header .header-top .header-top-container .header-top-info {
+    width: 53%;
+}
+
+header .header-top .header-top-container .header-top-info ul{
+    color: white;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+header .header-top .header-top-container .header-top-info ul li {
+    font-size: var(--fz-small);
+}
+
+header .header-top .header-top-container .header-top-search {
+    width: 47%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+header .header-top .header-top-container .header-top-search form .search {
+    font-size: var(--fz-small);
+    background-color: var(--color-secondary-1);
+    width: max-content;
+    height: 26px;
+    border-radius: 20px;
+    display: flex;
+    padding: 0px 5px;
+    align-items: center;
+}
+
+header .header-top .header-top-container .header-top-search form .search input.search-input {
+    width: 208px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+header nav.header-nav {
+    height: 65px;
+    width: 100%;
+    background-color: red;
+    position: sticky;
+    top: 0;
+}
+
+/* ============================================================ */
+/* ========================== Header ========================== */
+/* ============================================================ */
+
+
+
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 65px;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+    
+    header .header-top {
+        display: none;
+    }
 }
