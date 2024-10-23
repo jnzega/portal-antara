@@ -1,6 +1,16 @@
 <?php
 include 'include/koneksi.php';
 
+// Mulai session
+session_start();
+
+// Cek apakah user sudah login
+if (!isset($_SESSION['user_id'])) {
+    // Jika belum login, redirect ke halaman login
+    header('Location: http://localhost/portal-antara/page/login-admin');
+    exit();
+}
+
 function uploadImage($file, $title, $isCarousel = false) {
     $allowedExtensions = ['jpg', 'jpeg', 'png'];
     $fileExtension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));

@@ -9,38 +9,17 @@ class Page extends Controller{
         $this->view('footer');
     }
 
-    public function profil(){
-        $data['title'] = 'PPID | Profil';
+    public function login_admin(){
+        $data['title'] = 'PPID | Login Admin';
         $this->view('header', $data);
-        $this->view('page/profil');
+        $this->view('page/login-admin');
         $this->view('footer');
     }
 
-    public function tugas_dan_fungsi(){
-        $data['title'] = 'PPID | Tugas dan Fungsi';
+    public function register_admin(){
+        $data['title'] = 'PPID | Login Admin';
         $this->view('header', $data);
-        $this->view('page/tugas_dan_fungsi');
-        $this->view('footer');
-    }
-
-    public function visi_dan_misi(){
-        $data['title'] = 'PPID | Visi dan Misi';
-        $this->view('header', $data);
-        $this->view('page/visi_dan_misi');
-        $this->view('footer');
-    }
-
-    public function struktur_organisasi(){
-        $data['title'] = 'PPID | Struktur Organisasi';
-        $this->view('header', $data);
-        $this->view('page/struktur_organisasi');
-        $this->view('footer');
-    }
-
-    public function regulasi(){
-        $data['title'] = 'PPID | Regulasi';
-        $this->view('header', $data);
-        $this->view('page/regulasi');
+        $this->view('page/register-admin');
         $this->view('footer');
     }
 

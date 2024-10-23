@@ -1,3 +1,8 @@
+<?php
+// Mulai session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +48,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FDD428">
                                 <path d="M96-144v-648h384v144h384v504H96Zm72-72h240v-72H168v72Zm0-144h240v-72H168v72Zm0-144h240v-72H168v72Zm0-144h240v-72H168v72Zm312 432h312v-360H480v360Zm72-216v-72h168v72H552Zm0 144v-72h168v72H552Z" />
                             </svg>
-                            korporat.antaranews.com
+                            <a style="text-decoration: none; color: white" href="https://korporat.antaranews.com" target="_blank" rel="noopener noreferrer">korporat.antaranews.com</a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +64,65 @@
                 </div>
             </div>
         </div>
-        <nav class="header-nav">
-
+        <nav class="header-nav center-item-horizontal">
+            <div class="header-nav-container container-width center-item-vertical">
+                <div class="header-nav-link center-item-vertical">
+                    <a href="http://localhost/portal-antara/">
+                        <img src="http://localhost/portal-antara/assets/img/Logo-LKBN-Antara.png" alt="">
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="#">Beranda</a></li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Profil
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2a3855">
+                                    <path d="M480-357.85 253.85-584 296-626.15l184 184 184-184L706.15-584 480-357.85Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Regulasi
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2a3855">
+                                    <path d="M480-357.85 253.85-584 296-626.15l184 184 184-184L706.15-584 480-357.85Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Informasi Publik
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2a3855">
+                                    <path d="M480-357.85 253.85-584 296-626.15l184 184 184-184L706.15-584 480-357.85Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Standar Layanan
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2a3855">
+                                    <path d="M480-357.85 253.85-584 296-626.15l184 184 184-184L706.15-584 480-357.85Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="#">Berita</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="header-nav-login center-item-vertical">
+                    <a href="http://localhost/portal-antara/page/login-admin">
+                        <span class="title-button">Tombol Login Admin</span>
+                        <div class="login-button center-item-horizontal center-item-vertical">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fdd428">
+                                <path d="M680-280q25 0 42.5-17.5T740-340q0-25-17.5-42.5T680-400q-25 0-42.5 17.5T620-340q0 25 17.5 42.5T680-280Zm0 120q31.38 0 57.19-14.31t42.19-38.31Q757-226 732-233q-25-7-52-7t-52 7q-25 7-47.38 20.38 16.38 24 42.19 38.31Q648.62-160 680-160Zm-200 59.23q-129.77-35.39-214.88-152.77Q180-370.92 180-516v-230.15l300-112.31 300 112.31v226.61q-14-5.69-29.39-10.27-15.38-4.57-30.61-7.19v-167.38L480-794l-240 89.62V-516q0 53.15 15 103.81 15 50.65 41.35 94.69 26.34 44.04 62.96 79.08 36.61 35.04 79.46 55.96l1.16-.39q7.92 22 20.53 42.16 12.62 20.15 28.69 36.61-2.53.77-4.57 1.66-2.04.88-4.58 1.65Zm200 .77q-74.92 0-127.46-52.54Q500-205.08 500-280q0-74.92 52.54-127.46Q605.08-460 680-460q74.92 0 127.46 52.54Q860-354.92 860-280q0 74.92-52.54 127.46Q754.92-100 680-100ZM480-488.23Z" />
+                            </svg>
+                        </div>
+                    </a>
+                    <div class="menu-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#6C757D">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>

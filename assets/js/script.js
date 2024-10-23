@@ -1,3 +1,10 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const headerNav = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    headerNav.classList.toggle('active');
+})
+
 $(document).ready(function () {
     // Inisialisasi carousel secara manual
     var $carousel = $('#carouselExampleIndicators');
