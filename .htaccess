@@ -5,6 +5,11 @@ Options -Indexes
     Deny from all
 </FilesMatch>
 
+# Izinkan akses ke login-admin.php dan register-admin.php
+RewriteCond %{REQUEST_URI} !^/portal-antara/page/login-admin\.php$
+RewriteCond %{REQUEST_URI} !^/portal-antara/page/register-admin\.php$
+
+# Blokir akses ke file PHP lainnya dalam direktori page
 RewriteRule ^page/(.*\.php)$ - [F,L]
 
 RewriteEngine On

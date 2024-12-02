@@ -23,4 +23,10 @@ class Page extends Controller{
         $this->view('footer');
     }
 
+    public function admin(){
+        $data['title'] = 'PPID | Admin Dashboard';
+        $this->view('header', $data);
+        $this->view('page/admin');
+    }
+
 }

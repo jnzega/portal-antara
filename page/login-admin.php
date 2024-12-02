@@ -1,5 +1,14 @@
 <?php
 require 'include/koneksi.php';  // File untuk koneksi database
+if (isset($_SESSION['user_id'])) {
+    // Jika pengguna sudah login, redirect ke admin.php
+    echo '
+                <script type="text/javascript">
+                    window.location.href = "http://localhost/portal-antara/admin.php";
+                </script>';
+    exit();
+}
+
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -22,26 +31,40 @@ if (isset($_POST['login'])) {
             echo '
                 <script type="text/javascript">
                     window.location.href = "http://localhost/portal-antara/admin.php";
-                </script>
-            ';
-            exit(); // Hentikan eksekusi skrip setelah redirect
+                </script>';
+            exit();
         } else {
-            echo "Password salah!";
+            $error = "Password salah!";
         }
     } else {
-        echo "Username tidak ditemukan!";
+        $error = "Username tidak ditemukan!";
     }
 }
+
+
 ?>
 
-<form style="margin-top: 20px;" action="login-admin" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
 
-    <button type="submit" name="login">Login</button>
-</form>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Login Admin</h2>
+    <?php if (isset($error)): ?>
+        <div class="alert alert-danger">
+            <?= htmlspecialchars($error); ?>
+        </div>
+    <?php endif; ?>
+    <form action="login-admin" method="POST" class="mx-auto" style="max-width: 400px;">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" required autofocus>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <button type="submit" name="login" class="btn btn-primary w-100">Login</button>
+    </form>
+    <p class="mt-3 text-center">Belum punya akun? <a href="register-admin">Daftar di sini</a></p>
+</div>
 
-<p>Belum punya akun? <a href="register-admin">Daftar di sini</a></p>
+<?php include 'footer.php'; ?>
